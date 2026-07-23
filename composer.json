@@ -1,0 +1,34 @@
+{
+    "name": "radiantabyss/cli",
+    "description": "RA CLI",
+    "keywords": [
+        "ra vue artisan",
+		"vue artisan"
+    ],
+    "homepage": "https://radiantabyss.com/cli",
+    "license": "proprietary",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Robert B.",
+            "email": "robert@radiantabyss.com",
+            "role": "owner"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "RA\\CLI\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RA\\CLI\\Tests\\": "tests"
+        }
+    }
+}
