@@ -43,7 +43,13 @@ class VueBuilder implements BuilderInterface
             shell_exec('npm install');
         }
 
-        shell_exec('npx vite build');
+        $vite_build_command = 'npx vite build';
+
+        if ( isset(self::$options['env']) && self::$options['env'] ) {
+            $vite_build_command .= ' --mode='.self::$options['env'];
+        }
+
+        shell_exec($vite_build_command);
 
         if ( !abs_file_exists('dist') ) {
             throw new \Exception('Vue build failed.');

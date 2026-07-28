@@ -1,0 +1,12 @@
+# Build output
+/dist/
+/vendor
+
+# Go
+*.exe
+*.test
+*.out
+
+# Env / local
+.ra
+test
